@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/appName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="@string/app_name"/>
+        <TextView android:id="@+id/appVersion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginBottom="5dp" android:text="@string/app_version"/>
+    </LinearLayout>
+    <TextView android:id="@+id/developerName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="@string/developer_name"/>
+    <TextView android:id="@+id/email" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/developer_email"/>
+    <TextView android:id="@+id/remark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="@string/app_description"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="16sp" android:textStyle="bold" android:layout_gravity="bottom" android:id="@+id/copyright" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/copyright" android:textAlignment="center"/>
+    </FrameLayout>
+</LinearLayout>

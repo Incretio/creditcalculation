@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="CaptionText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">clip_horizontal</item>
+    </style>
+    <style name="EditedTextView">
+        <item name="android:background">@android:drawable/editbox_background</item>
+    </style>
+    <style name="ResultText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">right</item>
+    </style>
+    <style name="Widget.AppCompat.TextView.SpinnerItem">
+    </style>
+    <style name="tableTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

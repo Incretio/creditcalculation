@@ -1,0 +1,20 @@
+Алгоритм запроса dmInspections.qAddWorryForEditCard
+ЕСЛИ для текущей категории в таблице ExaminationPatientCard ещё нет описания, ТО
+добавляем его
+
+ЕСЛИ для текущей категории в таблице ExaminationPatientCard ещё нет описания
+
+
+btnCalc
+
+txtObjectPrice
+txtFirstPayout
+txtPayoutPeriod
+txtCreditRate
+txtStartDate
+
+txtCreditAmount
+txtMonthlyPayment
+txtTotalAmountPayment
+txtOverpaymentAmount
+txtStopDate
