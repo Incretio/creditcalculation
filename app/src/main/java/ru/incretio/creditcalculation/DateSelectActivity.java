@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 
+import ru.incretio.apps.creditcalculation.R;
 import ru.incretio.creditcalculation.utils.DateUtils;
 
 public class DateSelectActivity extends Activity implements OnDateChangeListener {

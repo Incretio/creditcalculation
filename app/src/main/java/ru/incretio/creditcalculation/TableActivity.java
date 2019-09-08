@@ -7,6 +7,8 @@ import android.util.TypedValue;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import ru.incretio.apps.creditcalculation.R;
 import ru.incretio.creditcalculation.logics.Credit;
 import ru.incretio.creditcalculation.logics.CreditGraphicRecord;
 import ru.incretio.creditcalculation.utils.DateUtils;

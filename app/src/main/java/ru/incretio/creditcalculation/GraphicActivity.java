@@ -11,6 +11,8 @@ import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYSeries;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
+
+import ru.incretio.apps.creditcalculation.R;
 import ru.incretio.creditcalculation.logics.CreditGraphicRecord;
 
 public class GraphicActivity extends Activity {

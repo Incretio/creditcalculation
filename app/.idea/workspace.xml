@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9174823e-446b-4df1-aed3-076206d2ddda" name="Default Changelist" comment="" />
+    <list default="true" id="9174823e-446b-4df1-aed3-076206d2ddda" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/AboutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/AboutActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/DateSelectActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/DateSelectActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/GraphicActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/GraphicActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/TableActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/incretio/creditcalculation/TableActivity.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +25,11 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1QV1CkuO6cjU9GkSrJT0ZN5FGkU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -46,10 +60,22 @@
       <option name="presentableId" value="Default" />
       <updated>1567840823504</updated>
       <workItem from="1567840825422" duration="683000" />
+      <workItem from="1567929122016" duration="356000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
