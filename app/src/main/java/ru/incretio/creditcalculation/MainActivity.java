@@ -17,9 +17,12 @@ import android.widget.Toast;
 
 import java.util.Date;
 
+import ru.incretio.apps.creditcalculation.R;
 import ru.incretio.creditcalculation.logics.AnnuityCredit;
 import ru.incretio.creditcalculation.logics.Credit;
 import ru.incretio.creditcalculation.utils.DateUtils;
+import ru.incretio.creditcalculation.utils.EditableValue;
+import ru.incretio.creditcalculation.watchers.NumberTextWatcher;
 
 public class MainActivity extends AppCompatActivity {
     private String TEXT_CLEANED;
@@ -56,18 +59,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setConstant();
-        setContentView((int) R.layout.activity_main);
-        this.btnCalc = (Button) findViewById(R.id.btnCalc);
-        this.edtObjectPrice = (EditText) findViewById(R.id.edtObjectPrice);
-        this.edtFirstPayout = (EditText) findViewById(R.id.edtFirstPayout);
-        this.edtPayoutPeriod = (EditText) findViewById(R.id.edtPayoutPeriod);
-        this.edtCreditRate = (EditText) findViewById(R.id.edtCreditRate);
-        this.edtStartDate = (EditText) findViewById(R.id.edtStartDate);
-        this.txtCreditAmount = (TextView) findViewById(R.id.txtCreditAmount);
-        this.txtMonthlyPayment = (TextView) findViewById(R.id.txtMonthlyPayment);
-        this.txtTotalAmountPayment = (TextView) findViewById(R.id.txtTotalAmountPayment);
-        this.txtOverpaymentAmount = (TextView) findViewById(R.id.txtOverpaymentAmount);
-        this.txtStopDate = (TextView) findViewById(R.id.txtStopDate);
+        setContentView(R.layout.activity_main);
+        this.btnCalc = findViewById(R.id.btnCalc);
+        this.edtObjectPrice = findViewById(R.id.edtObjectPrice);
+        this.edtObjectPrice.addTextChangedListener(new NumberTextWatcher(this.edtObjectPrice));
+        this.edtFirstPayout = findViewById(R.id.edtFirstPayout);
+        this.edtFirstPayout.addTextChangedListener(new NumberTextWatcher(this.edtFirstPayout));
+        this.edtPayoutPeriod = findViewById(R.id.edtPayoutPeriod);
+        this.edtCreditRate = findViewById(R.id.edtCreditRate);
+        this.edtStartDate = findViewById(R.id.edtStartDate);
+        this.txtCreditAmount = findViewById(R.id.txtCreditAmount);
+        this.txtMonthlyPayment = findViewById(R.id.txtMonthlyPayment);
+        this.txtTotalAmountPayment = findViewById(R.id.txtTotalAmountPayment);
+        this.txtOverpaymentAmount = findViewById(R.id.txtOverpaymentAmount);
+        this.txtStopDate = findViewById(R.id.txtStopDate);
         loadData();
     }
 
@@ -115,13 +120,16 @@ public class MainActivity extends AppCompatActivity {
     public void onBtnCalcClick(View v) {
         try {
             ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(this.btnCalc.getWindowToken(), 2);
-            if (this.edtFirstPayout.getText().toString().trim().isEmpty()) {
+            EditableValue firstPayoutValue = new EditableValue(this.edtFirstPayout);
+            EditableValue objectPriceValue = new EditableValue(this.edtObjectPrice);
+
+            if (firstPayoutValue.isEmptyValue()) {
                 this.edtFirstPayout.setText(this.TEXT_ZERO);
             }
             if (this.edtStartDate.getText().toString().trim().isEmpty()) {
                 this.edtStartDate.setText(DateUtils.formatDate(new Date()));
             }
-            if (Double.parseDouble(this.edtObjectPrice.getText().toString()) <= Double.parseDouble(this.edtFirstPayout.getText().toString())){
+            if (Double.parseDouble(objectPriceValue.getValue()) <= Double.parseDouble(firstPayoutValue.getValue())){
                 this.txtCreditAmount.setText(this.TEXT_DECIMAL_ZERO);
                 this.txtMonthlyPayment.setText(this.TEXT_DECIMAL_ZERO);
                 this.txtTotalAmountPayment.setText(this.TEXT_DECIMAL_ZERO);
@@ -130,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 showMessage(this.TEXT_ALREADY_PAID);
                 GlobalData.setCredit(null);
             } else {
-                Credit credit = new AnnuityCredit(this.edtObjectPrice.getText().toString(), this.edtFirstPayout.getText().toString(), this.edtStartDate.getText().toString(), this.edtPayoutPeriod.getText().toString(), this.edtCreditRate.getText().toString());
+                Credit credit = new AnnuityCredit(objectPriceValue.getValue(), firstPayoutValue.getValue(), this.edtStartDate.getText().toString(), this.edtPayoutPeriod.getText().toString(), this.edtCreditRate.getText().toString());
                 credit.creditGraphicCalculation();
                 this.txtCreditAmount.setText(Credit.formatDouble(credit.getCreditAmount()));
                 this.txtMonthlyPayment.setText(Credit.formatDouble(credit.getMonthlyPayment()));
